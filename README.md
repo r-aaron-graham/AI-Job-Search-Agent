@@ -1,53 +1,17 @@
-# AI-Job-Search-Agent
-## Project Overview
+# AI Job Search Agent
 
-The AI-Job-Search-Agent repository contains an automated job search agent that assists users with resume tailoring and application submission. It streamlines the job search process by automating repetitive tasks.
+Design specification for an assistant that finds job listings, drafts tailored application materials, and tracks application activity. This repository contains requirements and expected behavior for five modules.
 
-## Features
+## Review the design
 
-- Automated job search and application submission
-- Resume tailoring for specific job requirements
-- User-friendly interface for managing job searches
+Start with the [system overview](Documentation.md). The proposed workflow is to retrieve and filter job listings, use a selected listing to tailor application materials, and record application outcomes.
 
-## Usage
+| Module | Design scope |
+| --- | --- |
+| [Job search](JobSearchModule.md) | Job-board retrieval, filtering, and listing storage |
+| [Résumé and cover letter tailoring](ResumeTailoringModule.md) | Draft generation, editing, and finalization |
+| [Application submission](ApplicationSubmissionModule.md) | Form navigation, uploads, and submission logging |
+| [Tracking and logging](TrackingModule.md) | Local action records, filtering, and reporting |
+| [Google integration](GoogleAPIIntegration.md) | Optional OAuth, calendar, and document integration |
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd AI-Job-Search-Agent
-   ```
-2. Set up a virtual environment and install dependencies:
-   ```bash
-   python -m venv venv
-   # Activate the virtual environment
-   venv\Scripts\activate  # On Windows
-   source venv/bin/activate  # On macOS/Linux
-   pip install -r requirements.txt
-   ```
-3. Run the job search agent and follow the prompts to tailor your resume and submit applications.
-Automated job search agent with resume tailoring and application submission.
-## Setup Instructions
-
-### Cloning the Repository
-
-```bash
-git clone <repository-url>
-cd AI-Job-Search-Agent
-```
-
-### Setting Up a Virtual Environment
-
-```bash
-python -m venv venv
-# Activate the virtual environment
-# On Windows
-venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
-```
-
-### Installing Dependencies
-
-```bash
-pip install -r requirements.txt
-```
+**Status:** Design-stage project. The repository contains Markdown specifications and has no executable agent, dependency manifest, or deployment setup.
