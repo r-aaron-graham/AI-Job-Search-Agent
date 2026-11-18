@@ -1,6 +1,6 @@
-# Documentation
+# Job Search Agent Design
 
-This document outlines the expected behavior for each module in the AI Job Search Agent project.
+This document specifies proposed behavior. Implementation and integration validation remain future work.
 
 ## Modules
 
@@ -23,3 +23,13 @@ This document outlines the expected behavior for each module in the AI Job Searc
 ### Google API Integration Module (if needed)
 - **Requirements:** Integrate with Google APIs for additional functionality, such as calendar scheduling or document storage. Handle authentication and secure access to Google services.
 - **Expected Behavior:** Authenticate with Google services, access and manipulate data from Google APIs, and log interactions with Google services.
+
+## Implementation acceptance criteria
+
+- Retrieval records the source URL, retrieval time, and stable listing identifier. Repeated retrieval preserves one listing record.
+- Tailoring preserves verified experience and flags missing information for applicant review.
+- Submission presents the destination, answers, and documents for applicant approval before the final action.
+- Retries check existing receipts. Ambiguous outcomes remain pending until reconciled.
+- Tracking distinguishes drafted, approved, submitted, confirmed, and failed states. Confirmation retains receipt evidence.
+- Logs exclude passwords, access tokens, and full résumé contents. Define record access and retention before deployment.
+- Optional Google access requests the scopes needed for enabled operations and supports revocation.
